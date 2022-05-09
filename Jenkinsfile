@@ -3,14 +3,14 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'mvn --version'
+                sh 'echo "Hello World!'
             }
         }
         stage('artifacts to s3') {
             steps {
                 s3Upload acl: 'Private',
                     bucket: 'amex-interview-bucket-5-9-22',
-                    cacheControl: '', 
+                    cacheControl: '',
                     excludePathPattern: '',
                     file: '*',
                     includePathPattern: '',
