@@ -18,8 +18,7 @@ pipeline {
                     redirectLocation: '',
                     sseAlgorithm: '',
                     tags: '$env.BRANCH_NAME.$BUILD_NUMBER-$BUILD_STATUS!',
-                    text: '',
-                    workingDir: '/'
+                    text: ''
             }
         }
     }
