@@ -5,7 +5,7 @@ pipeline {
             steps {
                 sh 'mvn --version'
             }
-        };
+        },
         stage('Upload') {
             dir('path/to/your/project/workspace'){
                 pwd(); //Log current directory
@@ -19,3 +19,4 @@ pipeline {
             };
         }
     }
+}
