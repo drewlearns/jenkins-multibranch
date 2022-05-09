@@ -7,7 +7,7 @@ pipeline {
             }
         }
         stage('artifacts to s3') {
-            steps{
+            steps {
                 s3Upload acl: 'Private',
                     bucket: 'amex-interview-bucket-5-9-22',
                     cacheControl: '', excludePathPattern: '',
@@ -18,7 +18,9 @@ pipeline {
                     redirectLocation: '',
                     sseAlgorithm: '',
                     tags: '$env.BRANCH_NAME.$BUILD_NUMBER-$BUILD_STATUS!',
-                    text: '', workingDir: '/'
+                    text: '',
+                    workingDir: '/'
+            }
         }
     }
 }
